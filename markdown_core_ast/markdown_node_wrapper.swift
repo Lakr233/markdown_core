@@ -5,7 +5,7 @@
 import Foundation
 
 @dynamicMemberLookup
-public enum NodeWrapper: Codable, Sendable {
+public enum NodeWrapper: Codable, Sendable, Equatable, Hashable {
     case blockquote(Blockquote)
     case breakNode(Break)
     case code(Code)
