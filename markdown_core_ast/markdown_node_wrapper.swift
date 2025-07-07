@@ -33,8 +33,6 @@ public enum NodeWrapper: Codable, Sendable, Equatable, Hashable {
     case tableRow(TableRow)
     case text(Text)
     case thematicBreak(ThematicBreak)
-    case toml(Toml)
-    case yaml(Yaml)
 
     private enum CodingKeys: String, CodingKey {
         case type
@@ -71,8 +69,6 @@ public enum NodeWrapper: Codable, Sendable, Equatable, Hashable {
         case "tableRow": self = try .tableRow(TableRow(from: decoder))
         case "text": self = try .text(Text(from: decoder))
         case "thematicBreak": self = try .thematicBreak(ThematicBreak(from: decoder))
-        case "toml": self = try .toml(Toml(from: decoder))
-        case "yaml": self = try .yaml(Yaml(from: decoder))
         default:
             throw DecodingError.dataCorruptedError(forKey: .type, in: container, debugDescription: "Unknown node type: \(type)")
         }
@@ -107,8 +103,6 @@ public enum NodeWrapper: Codable, Sendable, Equatable, Hashable {
         case let .tableRow(node): try node.encode(to: encoder)
         case let .text(node): try node.encode(to: encoder)
         case let .thematicBreak(node): try node.encode(to: encoder)
-        case let .toml(node): try node.encode(to: encoder)
-        case let .yaml(node): try node.encode(to: encoder)
         }
     }
 
@@ -141,8 +135,6 @@ public enum NodeWrapper: Codable, Sendable, Equatable, Hashable {
         case let .tableRow(node): node
         case let .text(node): node
         case let .thematicBreak(node): node
-        case let .toml(node): node
-        case let .yaml(node): node
         }
     }
 

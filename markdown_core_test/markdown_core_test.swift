@@ -26,8 +26,6 @@ import Testing
         author: Copilot
         ---
 
-        +++\ntitle = "TOML frontmatter"\n+++
-
         # 一级标题
 
         ## 二级标题

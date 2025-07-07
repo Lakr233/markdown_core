@@ -180,19 +180,6 @@ public struct TableCell: ParentNode {
     public var children: [NodeWrapper] // PhrasingContent
 }
 
-// Frontmatter
-public struct Yaml: LiteralNode {
-    public var type: String = "yaml"
-    public var position: Position?
-    public var value: String
-}
-
-public struct Toml: LiteralNode {
-    public var type: String = "toml"
-    public var position: Position?
-    public var value: String
-}
-
 // Math
 public struct Math: LiteralNode {
     public var type: String = "math"
