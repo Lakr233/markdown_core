@@ -31,7 +31,12 @@ let package = Package(
         ),
         .binaryTarget(
             name: "markdown_bridge",
-            path: "markdown_bridge/markdown_bridge.xcframework"
+            url: "https://github.com/Lakr233/markdown_core/releases/download/0/markdown_bridge.xcframework.zip",
+            checksum: "74bfc82791af7d76113c4a3a4d7de8a7c74300525bb4917132521352b0ad026f"
         ),
+        // .binaryTarget(
+        //     name: "markdown_bridge",
+        //     path: "markdown_bridge/markdown_bridge.xcframework"
+        // ),
     ]
 )

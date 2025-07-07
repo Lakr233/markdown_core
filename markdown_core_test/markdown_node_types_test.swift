@@ -137,7 +137,7 @@ import Testing
     let ast = try MarkdownAbstractSyntaxTreeParser.parse(from: json)
     if case let .paragraph(para) = ast.children.first {
         if case let .strong(strong) = para.children.first {
-            #expect(strong.type == "strong") 
+            #expect(strong.type == "strong")
         } else {
             #expect(Bool(false))
         }
